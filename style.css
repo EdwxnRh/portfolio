@@ -1,0 +1,60 @@
+/* MOBILE VERSION */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header1 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 1;
+  font-size: 48px;
+  line-height: 58px;
+  color: #171d1c;
+}
+
+.emph {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #648966;
+}
+
+.subheader {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 1;
+  font-size: 32px;
+  line-height: 39px;
+  color: #171d1c;
+}
+
+.text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 1;
+  font-size: 12px;
+  line-height: 15px;
+  color: #171d1c;
+}
+
+.body {
+  margin: 3.2rem;
+}
+
+#hi {
+  position: absolute;
+  top: 5rem;
+}
+
+img {
+  position: absolute;
+  width: 300px;
+  height: 344px;
+  right: 0%;
+  top: 15vh;
+}
