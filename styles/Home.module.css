@@ -22,9 +22,6 @@
   .container {
     max-width: 640px;
   }
-  .bg {
-    display: none;
-  }
   .title {
     font-size: 12rem;
     margin-bottom: -10rem;
@@ -36,9 +33,6 @@
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
-  }
-  .bg {
-    display: none;
   }
   .title {
     font-size: 12rem;
@@ -52,12 +46,6 @@
   .container {
     max-width: 1024px;
   }
-  .bg {
-    display: inline;
-    top: 12rem;
-    left: 1rem;
-    width: 95%;
-  }
   .title {
     font-size: 12rem;
     margin-bottom: -10rem;
@@ -70,38 +58,36 @@
   .container {
     max-width: 1280px;
   }
-  .bg {
-    top: 8rem;
-    left: 5rem;
-    width: 90%;
-  }
   .title {
     font-size: 14.4rem;
     margin-bottom: -13rem;
   }
   .head {
-    margin-top: -5rem;
+    margin-top: 2rem;
   }
 }
 
 .head {
+  width: 100%;
+  height: 70vh;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr;
   place-items: center;
 }
 
 .bg {
-  position: absolute;
-  height: 100%;
-  background-image: url(/assets/design-drawings.svg);
+  margin-top: 10rem;
+  height: 120%;
+  width: 120%;
+  grid-area: 1 / 1 / 2 / 2;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: contain;
 }
 
-.title {
-  font-weight: 800;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+.intro {
+  grid-area: 2 / 1 / 3 / 2;
 }
 
 .contact {
@@ -112,11 +98,45 @@
   border-radius: 4px;
 }
 
-.intro {
+.introText {
   padding: 0rem 4rem;
   width: 55ch;
   margin-top: 5rem;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
+}
+
+.introSection {
+  margin-top: 12rem;
+}
+
+.introBox {
+  padding: 2rem 8rem 4rem 8rem;
+  background: #fafafa;
+  font-size: 1.8rem;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.introTitle {
+  font-size: 6.4rem;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.introTextSt {
+  margin-top: -2rem;
+  padding-right: 10rem;
+  grid-area: 2 / 1 / 3 / 2;
+  text-align: justify;
+}
+
+.introText {
+  grid-area: 1 / 2 / 3 / 3;
+  padding-top: 6rem;
+  text-align: justify;
 }
