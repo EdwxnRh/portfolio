@@ -54,9 +54,9 @@ export default function Home() {
               </h2>
               <p className={styles.introTextSt}>
                 I truly believe that good design is the key to success. <br />
-                "We eat with our eyes" not only applies to food but also to
-                everything around us. Our brain decides inseconds if we like
-                something or not, only based onthe first glaze.
+                &quot;We eat with our eyes&quot; not only applies to food but
+                also to everything around us. Our brain decides inseconds if we
+                like something or not, only based onthe first glaze.
               </p>
             </div>
             <p className={styles.introText}>
