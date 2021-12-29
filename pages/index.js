@@ -46,17 +46,19 @@ export default function Home() {
         </section>
         <section className={styles.introSection}>
           <div className={styles.introBox}>
-            <h2 className={styles.introTitle}>
-              Let&#39;s transform <br />
-              your idea into a <br />
-              solid product
-            </h2>
-            <p className={styles.introTextSt}>
-              I truly believe that good design is the key to success. <br />
-              "We eat with our eyes" not only applies to food but also to
-              everything around us. Our brain decides inseconds if we like
-              something or not, only based onthe first glaze.
-            </p>
+            <div className={styles.introHeader}>
+              <h2 className={styles.introTitle}>
+                Let&#39;s transform <br />
+                your idea into a <br />
+                solid product
+              </h2>
+              <p className={styles.introTextSt}>
+                I truly believe that good design is the key to success. <br />
+                "We eat with our eyes" not only applies to food but also to
+                everything around us. Our brain decides inseconds if we like
+                something or not, only based onthe first glaze.
+              </p>
+            </div>
             <p className={styles.introText}>
               Having not only a good-looking but also clear and inclusive design
               is a necessity in today&#39;s world.
