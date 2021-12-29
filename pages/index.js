@@ -23,7 +23,7 @@ export default function Home() {
           <h1 className={styles.title} id='three'>
             Revise.
           </h1>
-          <a className={styles.contact}>Let's work together - Contact me</a>
+          <a className={styles.contact}>Let&#39;s work together - Contact me</a>
           <p className={styles.intro}>
             Hi, I am Edwin, a passionate designer and webdeveloper from Germany.
             I create beautiful, responsive and modern solutions for your idea.
