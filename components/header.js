@@ -97,7 +97,7 @@ export default function Header() {
         <div className='flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10'>
           <div className='flex justify-start lg:w-0 lg:flex-1'>
             <Link href='/'>
-              <a>
+              <a key='title'>
                 <h1 className='font-medium text-gray-500 hover:text-gray-900'>
                   Edwin Rheindt
                 </h1>
@@ -136,7 +136,10 @@ export default function Header() {
                       <div className='rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden'>
                         <div className='relative grid lg:grid-cols-2 gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8'>
                           {projects.map((item) => (
-                            <Link href={`/projects/${item.href}`}>
+                            <Link
+                              href={`/projects/${item.href}`}
+                              key={item.name}
+                            >
                               <a
                                 key={item.name}
                                 className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50'
@@ -166,6 +169,7 @@ export default function Header() {
                             <div key={item.name} className='flow-root'>
                               <Link href={`/projects/${item.href}`}>
                                 <a
+                                  key={item.name}
                                   href={item.href}
                                   className='-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100'
                                 >
@@ -212,7 +216,7 @@ export default function Header() {
                       <div className='rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden'>
                         <div className='relative grid lg:grid-cols-2 gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8'>
                           {posts.map((item) => (
-                            <Link href={`/blog/${item.href}`}>
+                            <Link href={`/blog/${item.href}`} key={item.name}>
                               <a
                                 key={item.name}
                                 className='flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50'
@@ -241,7 +245,10 @@ export default function Header() {
                                   className='text-base truncate'
                                 >
                                   <Link href={`/blog/${post.href}`}>
-                                    <a className='font-medium text-gray-900 hover:text-gray-700'>
+                                    <a
+                                      className='font-medium text-gray-900 hover:text-gray-700'
+                                      key={post.name}
+                                    >
                                       {post.name}
                                     </a>
                                   </Link>
@@ -313,6 +320,7 @@ export default function Header() {
                                 <a
                                   key={item.name}
                                   href={item.href}
+                                  rel='noreferrer'
                                   target={'_blank'}
                                   className='p-2 -m-3 flex items-start transition duration-150 ease-in-out rounded-lg hover:bg-gray-50'
                                 >
