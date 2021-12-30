@@ -1,30 +1,26 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  cursor: pointer;
+* {
+  font-family: 'Inter' !important;
 }
 
 #one {
   background-image: linear-gradient(180deg, #3c3c78 0%, #1382e9 100%);
-  animation: anim-gradient 9s -2.925s infinite;
+  animation: anim-gradient 12s 0s infinite;
+  line-height: 1.2;
 }
 
 #two {
   background-image: linear-gradient(180deg, #3c3c78 0%, #1382e9 100%);
-  animation: anim-gradient 9s 0s infinite;
+  animation: anim-gradient 12s 4s infinite;
+  line-height: 1.2;
 }
 
 #three {
   background-image: linear-gradient(180deg, #3c3c78 0%, #1382e9 100%);
-  animation: anim-gradient 9s -5.85s infinite;
+  animation: anim-gradient 12s 8s infinite;
 }
 
 @keyframes anim-gradient {
@@ -46,4 +42,93 @@ a {
   100% {
     color: black;
   }
+}
+
+@media (max-width: 340px) {
+  #one,
+  #two,
+  #three {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  #hero-develop {
+    width: calc(100% + 3rem);
+    right: -2rem;
+    top: 2rem;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  #hero-container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1090px) {
+  #hero-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  #hero-develop {
+    width: calc(100% + 2rem);
+    right: -1rem;
+  }
+}
+
+@media (min-width: 1090px) and (max-width: 1300px) {
+  #hero-container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #hero-develop {
+    width: calc(100% - 3rem);
+  }
+}
+
+@keyframes anim-hero {
+  0% {
+    opacity: 0;
+  }
+  8.335% {
+    opacity: 0;
+  }
+  16.667% {
+    opacity: 0;
+  }
+  24.995% {
+    opacity: 0.1;
+  }
+  33.333% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  58.335% {
+    opacity: 0.1;
+  }
+  66.667% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#hero-design {
+  animation: anim-hero 12s 0s infinite;
+}
+
+#hero-develop {
+  animation: anim-hero 12s 4s infinite backwards;
+}
+
+#hero-revise {
+  animation: anim-hero 12s 8s infinite backwards;
 }
