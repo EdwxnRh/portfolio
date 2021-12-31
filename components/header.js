@@ -3,6 +3,8 @@ import { Popover, Transition } from '@headlessui/react';
 import FeatherIcon from 'feather-icons-react';
 import Link from 'next/link';
 
+const nav = 'Navigation';
+
 const projects = [
   {
     name: 'Simple Ticket',
@@ -95,7 +97,7 @@ export default function Header() {
     <Popover className='relative bg-white z-50'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6'>
         <div className='flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10'>
-          <div className='flex justify-start lg:w-0 lg:flex-1'>
+          {/* <div className='flex justify-start lg:w-0 lg:flex-1'>
             <Link href='/'>
               <a key='title'>
                 <h1 className='font-medium text-gray-500 hover:text-gray-900'>
@@ -109,7 +111,7 @@ export default function Header() {
               <span className='sr-only'>Open menu</span>
               <FeatherIcon icon='bar-chart-2' />
             </Popover.Button>
-          </div>
+          </div> */}
           <Popover.Group as='nav' className='hidden md:flex space-x-10'>
             <Popover className='relative'>
               {({ open }) => (
@@ -167,7 +169,10 @@ export default function Header() {
                         <div className='px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8'>
                           {callsToAction.map((item) => (
                             <div key={item.name} className='flow-root'>
-                              <Link href={`/projects/${item.href}`}>
+                              <Link
+                                key={item.name}
+                                href={`/projects/${item.href}`}
+                              >
                                 <a
                                   key={item.name}
                                   href={item.href}
@@ -191,7 +196,7 @@ export default function Header() {
               )}
             </Popover>
 
-            <Popover className='relative'>
+            {/* <Popover className='relative'>
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -244,7 +249,10 @@ export default function Header() {
                                   key={post.id}
                                   className='text-base truncate'
                                 >
-                                  <Link href={`/blog/${post.href}`}>
+                                  <Link
+                                    href={`/blog/${post.href}`}
+                                    key={post.name}
+                                  >
                                     <a
                                       className='font-medium text-gray-900 hover:text-gray-700'
                                       key={post.name}
@@ -271,8 +279,8 @@ export default function Header() {
                   </Transition>
                 </>
               )}
-            </Popover>
-            <Popover className='relative'>
+            </Popover> */}
+            {/* <Popover className='relative'>
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -299,7 +307,7 @@ export default function Header() {
                           {extra.map((item) => {
                             if (item.name != 'Instagram') {
                               return (
-                                <Link href={`/${item.href}`}>
+                                <Link key={item.name} href={`/${item.href}`}>
                                   <a
                                     key={item.name}
                                     className='p-2 -m-3 flex items-start transition duration-150 ease-in-out rounded-lg hover:bg-gray-50'
@@ -342,9 +350,9 @@ export default function Header() {
                   </Transition>
                 </>
               )}
-            </Popover>
+            </Popover> */}
           </Popover.Group>
-          <div className='hidden md:flex items-center justify-end md:flex-1 lg:w-0'>
+          {/* <div className='hidden md:flex items-center justify-end md:flex-1 lg:w-0'>
             <a
               href='#'
               className='whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900'
@@ -357,11 +365,11 @@ export default function Header() {
             >
               Contact me
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 
-      <Transition
+      {/* <Transition
         as={Fragment}
         enter='duration-200 ease-out'
         enterFrom='opacity-0 scale-95'
@@ -440,7 +448,7 @@ export default function Header() {
             </div>
           </div>
         </Popover.Panel>
-      </Transition>
+      </Transition> */}
     </Popover>
   );
 }
