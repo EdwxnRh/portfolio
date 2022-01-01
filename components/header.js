@@ -3,8 +3,6 @@ import { Popover, Transition } from '@headlessui/react';
 import FeatherIcon from 'feather-icons-react';
 import Link from 'next/link';
 
-const nav = 'Navigation';
-
 const projects = [
   {
     name: 'Simple Ticket',
@@ -97,7 +95,7 @@ export default function Header() {
     <Popover className='relative bg-white z-50'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6'>
         <div className='flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10'>
-          {/* <div className='flex justify-start lg:w-0 lg:flex-1'>
+          <div className='flex justify-start lg:w-0 lg:flex-1'>
             <Link href='/'>
               <a key='title'>
                 <h1 className='font-medium text-gray-500 hover:text-gray-900'>
@@ -111,7 +109,7 @@ export default function Header() {
               <span className='sr-only'>Open menu</span>
               <FeatherIcon icon='bar-chart-2' />
             </Popover.Button>
-          </div> */}
+          </div>
           <Popover.Group as='nav' className='hidden md:flex space-x-10'>
             <Popover className='relative'>
               {({ open }) => (
@@ -122,7 +120,14 @@ export default function Header() {
                       'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none '
                     )}
                   >
-                    <span>Projects</span>
+                    <span className='flex'>
+                      Projects{' '}
+                      <FeatherIcon
+                        icon='chevron-down'
+                        size='22'
+                        className='pt-1'
+                      />
+                    </span>
                   </Popover.Button>
 
                   <Transition
@@ -196,7 +201,7 @@ export default function Header() {
               )}
             </Popover>
 
-            {/* <Popover className='relative'>
+            <Popover className='relative'>
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -205,7 +210,14 @@ export default function Header() {
                       'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none '
                     )}
                   >
-                    <span>Posts</span>
+                    <span className='flex'>
+                      Posts{' '}
+                      <FeatherIcon
+                        icon='chevron-down'
+                        size='22'
+                        className='pt-1'
+                      />
+                    </span>
                   </Popover.Button>
 
                   <Transition
@@ -265,7 +277,7 @@ export default function Header() {
                             </ul>
                           </div>
                           <div className='mt-5 text-sm'>
-                            <Link href='/blog/'>
+                            <Link href='/blog'>
                               <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                                 {' '}
                                 View all posts{' '}
@@ -279,8 +291,8 @@ export default function Header() {
                   </Transition>
                 </>
               )}
-            </Popover> */}
-            {/* <Popover className='relative'>
+            </Popover>
+            <Popover className='relative'>
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -289,7 +301,14 @@ export default function Header() {
                       'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none '
                     )}
                   >
-                    <span>More</span>
+                    <span className='flex'>
+                      More{' '}
+                      <FeatherIcon
+                        icon='chevron-down'
+                        size='22'
+                        className='pt-1'
+                      />
+                    </span>
                   </Popover.Button>
 
                   <Transition
@@ -350,26 +369,24 @@ export default function Header() {
                   </Transition>
                 </>
               )}
-            </Popover> */}
+            </Popover>
           </Popover.Group>
-          {/* <div className='hidden md:flex items-center justify-end md:flex-1 lg:w-0'>
-            <a
-              href='#'
-              className='whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900'
-            >
-              About
-            </a>
-            <a
-              href='#'
-              className='ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900'
-            >
-              Contact me
-            </a>
-          </div> */}
+          <div className='hidden md:flex items-center justify-end md:flex-1 lg:w-0'>
+            <Link href='/about'>
+              <a className='whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900'>
+                About
+              </a>
+            </Link>
+            <Link href='/contact-me'>
+              <a className='ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900'>
+                Contact me
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
 
-      {/* <Transition
+      <Transition
         as={Fragment}
         enter='duration-200 ease-out'
         enterFrom='opacity-0 scale-95'
@@ -385,11 +402,13 @@ export default function Header() {
           <div className='rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50'>
             <div className='pt-5 pb-6 px-5'>
               <div className='flex items-center justify-between'>
-                <a href='#' className='ml-3'>
-                  <h1 className='text-lg font-medium text-gray-500 hover:text-gray-900'>
-                    Projects
-                  </h1>
-                </a>
+                <Link href='/projects'>
+                  <a className='ml-3'>
+                    <h1 className='text-lg font-medium text-gray-500 hover:text-gray-900'>
+                      Projects
+                    </h1>
+                  </a>
+                </Link>
                 <div className='-mr-2 ml-auto'>
                   <Popover.Button className='bg-white rounded-md p-2 inline-flex text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none'>
                     <span className='sr-only'>Close menu</span>
@@ -400,55 +419,88 @@ export default function Header() {
               <div className='mt-6'>
                 <nav className='grid grid-cols-2 gap-y-8'>
                   {projects.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className='-m-3 p-3 flex items-center rounded-md hover:bg-gray-50'
-                    >
-                      <span className='ml-3 text-base font-medium text-gray-900'>
-                        {item.name}
-                      </span>
-                    </a>
+                    <Link key={item.name} href={`/${item.href}`}>
+                      <a
+                        key={item.name}
+                        className=' flex items-start transition duration-150 ease-in-out rounded-lg hover:bg-gray-50'
+                      >
+                        <div className='ml-4'>
+                          <p className=' p-2 text-base font-medium text-gray-900'>
+                            {item.name}
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
                   ))}
                 </nav>
               </div>
             </div>
             <div className='py-6 px-5 space-y-6'>
-              <div className='grid grid-cols-2 gap-y-4 gap-x-8'>
-                <a
-                  href='#'
-                  className='text-base font-medium text-gray-900 hover:text-gray-700'
-                >
-                  Blog posts
-                </a>
-                {extra.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className='text-base font-medium text-gray-900 hover:text-gray-700'
+              <div className='grid grid-cols-2 gap-4'>
+                <div className='flex items-center rounded-md hover:bg-gray-50'>
+                  <Link
+                    href='/blog'
+                    className='text-base font-medium text-gray-900'
                   >
-                    {item.name}
-                  </a>
-                ))}
+                    <div className='ml-4'>
+                      <a className='p-2'>Blog posts</a>
+                    </div>
+                  </Link>
+                </div>
+                {extra.map((item) => {
+                  if (item.name != 'Instagram') {
+                    return (
+                      <Link key={item.name} href={`/${item.href}`}>
+                        <a
+                          key={item.name}
+                          className=' flex items-start transition duration-150 ease-in-out rounded-lg hover:bg-gray-50'
+                        >
+                          <div className='ml-4'>
+                            <p className=' p-2 text-base font-medium text-gray-900'>
+                              {item.name}
+                            </p>
+                          </div>
+                        </a>
+                      </Link>
+                    );
+                  } else {
+                    return (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        rel='noreferrer'
+                        target={'_blank'}
+                        className='flex items-start transition duration-150 ease-in-out rounded-lg hover:bg-gray-50'
+                      >
+                        <div className='ml-4'>
+                          <p className='p-2 text-base font-medium text-gray-900'>
+                            {item.name}
+                          </p>
+                        </div>
+                      </a>
+                    );
+                  }
+                })}
               </div>
               <div>
-                <a
-                  href='#'
-                  className='w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-bl from-gray-700 via-gray-900 to-black'
-                >
-                  Contact me
-                </a>
+                <Link href='/contact-me'>
+                  <a className='w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-bl from-gray-700 via-gray-900 to-black'>
+                    Contact me
+                  </a>
+                </Link>
                 <p className='mt-6 text-center text-base font-medium text-gray-500'>
                   Want to get to know me better?{' '}
-                  <a href='#' className='text-indigo-600 hover:text-indigo-500'>
-                    About me
-                  </a>
+                  <Link href='/about'>
+                    <a className='text-indigo-600 hover:text-indigo-500'>
+                      About me
+                    </a>
+                  </Link>
                 </p>
               </div>
             </div>
           </div>
         </Popover.Panel>
-      </Transition> */}
+      </Transition>
     </Popover>
   );
 }

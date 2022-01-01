@@ -121,6 +121,9 @@
   }
 }
 
+#hero-container {
+}
+
 #hero-design {
   animation: anim-hero 12s 0s infinite;
 }
@@ -131,4 +134,18 @@
 
 #hero-revise {
   animation: anim-hero 12s 8s infinite backwards;
+}
+
+@media (max-width: 1280px) {
+  #intro-0 {
+    order: 0;
+  }
+
+  #intro-1 {
+    order: 2;
+  }
+
+  #intro-2 {
+    order: 1;
+  }
 }
