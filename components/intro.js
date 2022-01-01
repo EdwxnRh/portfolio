@@ -14,7 +14,7 @@ export default function Intro() {
         >
           <p>
             Having not only a good-looking but also clear and inclusive design
-            is a necessity in today's world.
+            is a necessity in today&#39;s world.
           </p>
           <p>
             {' '}
@@ -32,7 +32,7 @@ export default function Intro() {
           </p>
           <p>
             Creating things is a passion of mine and I want to use my experience
-            and creativity to help you realize your vision. Let's create the
+            and creativity to help you realize your vision. Let&#39;s create the
             future together!
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function Intro() {
           <p>I truly believe that good design is the key to success.</p>
           <p>
             {' '}
-            "We eat with our eyes" not only applies to food but also to
+            &#34;We eat with our eyes&#34; not only applies to food but also to
             everything around us. Our brain decides in seconds if we like
             something or not, only based on the first glaze.
           </p>
