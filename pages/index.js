@@ -12,6 +12,12 @@ export default function Home() {
       <Head>
         <title>Freelance UX UI Designer & Webdeveloper - Edwin Rheindt</title>
         <meta name='description' content='ss' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale = 1.0'
+        />
+        <meta charset='utf-8' />
+        <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
       </Head>
       <Header></Header>
       <main className='max-w-7xl mx-auto px-4 sm:px-6 z-40'>
