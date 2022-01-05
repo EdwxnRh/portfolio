@@ -9,9 +9,9 @@ export default function FeauturedProject() {
     <div className='text-center'>
       <section>
         <h1 className='sr-only'>simple ticket</h1>
-        <h3 className='text-3xl md:text-6xl font-semibold'>
+        <h2 className='text-3xl md:text-6xl font-semibold'>
           Selling event tickets made easy
-        </h3>
+        </h2>
         <Link href='/projects/simple-ticket' passHref={true}>
           <article className='bg-gray-50 mt-16 md:mt-28 rounded-2xl border max-w-4xl mx-auto py-8 px-6 sm:px-10 text-left grid md:grid-cols-2 relative cursor-pointer md:hover:scale-105'>
             <div>
@@ -49,20 +49,20 @@ export default function FeauturedProject() {
         <Divider content='- The design contains -' />
         <div className='grid md:grid-cols-3 gap-y-12 gap-x-6 place-items-center'>
           <div className='text-center'>
-            <h4 className='font-semibold text-xl'>Flat Dashboard</h4>
+            <h3 className='font-semibold text-xl'>Flat Dashboard</h4>
             <p className='text-lg max-w-sm'>
               A modern dashboard with color highlights and important
               information.
             </p>
           </div>
           <div className='text-center'>
-            <h4 className='font-semibold text-xl'>Mobile App</h4>
+            <h3 className='font-semibold text-xl'>Mobile App</h4>
             <p className='text-lg max-w-sm'>
               The mobile app is clean and allowes to quickly scan event tickets.
             </p>
           </div>
           <div className='text-center'>
-            <h4 className='font-semibold text-xl'>Sales Website</h4>
+            <h3 className='font-semibold text-xl'>Sales Website</h4>
             <p className='text-lg max-w-sm'>
               Custom sales website for every event and Apple Wallet integration.
             </p>
