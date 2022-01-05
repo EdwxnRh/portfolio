@@ -12,7 +12,7 @@ export default function FeauturedProject() {
         <h3 className='text-3xl md:text-6xl font-semibold'>
           Selling event tickets made easy
         </h3>
-        <Link href='/projects/simple-ticket'>
+        <Link href='/projects/simple-ticket' passHref={true}>
           <article className='bg-gray-50 mt-16 md:mt-28 rounded-2xl border max-w-4xl mx-auto py-8 px-6 sm:px-10 text-left grid md:grid-cols-2 relative cursor-pointer md:hover:scale-105'>
             <div>
               <h1 className='text-4xl font-semibold mb-2'>simple ticket</h1>
@@ -38,7 +38,11 @@ export default function FeauturedProject() {
             </div>
 
             <div className='absolute max-w-xl w-1/2 right-0 text-center h-72 hidden md:inline -top-2 lg:top-0'>
-              <Image src={'/assets/simple-ticket-mock.svg'} layout='fill' />
+              <Image
+                src={'/assets/simple-ticket-mock.svg'}
+                layout='fill'
+                alt='Mockup of the event dashboard.'
+              />
             </div>
           </article>
         </Link>

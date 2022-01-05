@@ -444,6 +444,7 @@ export default function Header() {
                 <div className='flex items-center rounded-md hover:bg-gray-50'>
                   <Link
                     href='/blog'
+                    passHref={true}
                     className='text-base font-medium text-gray-900'
                   >
                     <div className='ml-4'>

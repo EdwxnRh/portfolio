@@ -60,11 +60,7 @@ export default function Hero() {
             id='hero-design'
           >
             <div className='relative w-full h-full opacity-0 md:opacity-100'>
-              <Image
-                src={'/assets/design-drawings.svg'}
-                layout='fill'
-                alt='Little jokes for my designer folks!'
-              />
+              <Image src={'/assets/design-drawings.svg'} layout='fill' alt='' />
             </div>
           </div>
           <div
@@ -75,7 +71,7 @@ export default function Hero() {
               <Image
                 src={'/assets/develop-drawings.svg'}
                 layout='fill'
-                alt='Little jokes for my developer folks!'
+                alt=''
               />
             </div>
           </div>
@@ -84,11 +80,7 @@ export default function Hero() {
             id='hero-revise'
           >
             <div className='relative w-full h-full opacity-0 md:opacity-100'>
-              <Image
-                src={'/assets/revise-drawings.svg'}
-                layout='fill'
-                alt='Little jokes for my clients!'
-              />
+              <Image src={'/assets/revise-drawings.svg'} layout='fill' alt='' />
             </div>
           </div>
         </div>
