@@ -281,7 +281,11 @@ export default function Header() {
                               <a className='font-medium text-indigo-600 hover:text-indigo-500'>
                                 {' '}
                                 View all posts{' '}
-                                <span aria-hidden='true'>&rarr;</span>
+                                <FeatherIcon
+                                  className=' inline'
+                                  icon='arrow-right'
+                                  size='16'
+                                ></FeatherIcon>
                               </a>
                             </Link>
                           </div>

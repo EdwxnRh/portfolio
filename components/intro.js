@@ -3,13 +3,13 @@ export default function Intro() {
     <div className='bg-gray-50 mt-28 rounded-2xl border max-w-6xl mx-auto'>
       <div className='max-w-6xl mx-auto py-6 sm:py-14 px-6 sm:px-12 grid gap-y-0 lg:gap-y-6 xl:grid-cols-2'>
         <h2
-          className='text-3xl font-semibold text-gray-900 lg:text-6xl w-full xl:ml-3'
+          className='text-2xl font-semibold text-gray-900 lg:text-6xl w-full xl:ml-3'
           id='intro-3'
         >
           Let&#39;s transform your idea into a solid product
         </h2>
         <div
-          className='row-span-2 w-full text-justify lg:place-self-center xl:-ml-3'
+          className='row-span-2 w-full md:text-justify lg:place-self-center xl:-ml-3'
           id='intro-1'
         >
           <p>
@@ -37,21 +37,15 @@ export default function Intro() {
           </p>
         </div>
         <div
-          className='-mt-2 mb-6 xl:mb-0 xl:mt-0 w-full lg:w-4/5 text-justify xl:ml-3'
+          className='mt-2 mb-3 xl:mb-0 xl:mt-0 w-full xl:w-4/5 md:text-justify xl:ml-3'
           id='intro-2'
         >
-          <p>I truly believe that good design is the key to success.</p>
           <p>
-            {' '}
-            &#34;We eat with our eyes&#34; not only applies to food but also to
-            everything around us. Our brain decides in seconds if we like
-            something or not, only based on the first glaze.
+            I truly believe that good design is the key to success. &#34;We eat
+            with our eyes&#34; not only applies to food but also to everything
+            around us. Our brain decides in seconds if we like something or not,
+            only based on the first glaze.
           </p>
-        </div>
-
-        <div className='mt-8 flex lg:mt-0 lg:flex-shrink-0'>
-          <div className='inline-flex rounded-md shadow'></div>
-          <div className='ml-3 inline-flex rounded-md shadow'></div>
         </div>
       </div>
     </div>
