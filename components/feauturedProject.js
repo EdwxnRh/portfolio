@@ -49,20 +49,20 @@ export default function FeauturedProject() {
         <Divider content='- The design contains -' />
         <div className='grid md:grid-cols-3 gap-y-12 gap-x-6 place-items-center'>
           <div className='text-center'>
-            <h3 className='font-semibold text-xl'>Flat Dashboard</h3>
+            <h4 className='font-semibold text-xl'>Flat Dashboard</h4>
             <p className='text-lg max-w-sm'>
               A modern dashboard with color highlights and important
               information.
             </p>
           </div>
           <div className='text-center'>
-            <h3 className='font-semibold text-xl'>Mobile App</h3>
+            <h4 className='font-semibold text-xl'>Mobile App</h4>
             <p className='text-lg max-w-sm'>
               The mobile app is clean and allowes to quickly scan event tickets.
             </p>
           </div>
           <div className='text-center'>
-            <h3 className='font-semibold text-xl'>Sales Website</h3>
+            <h4 className='font-semibold text-xl'>Sales Website</h4>
             <p className='text-lg max-w-sm'>
               Custom sales website for every event and Apple Wallet integration.
             </p>
